@@ -1,8 +1,10 @@
 def bubble_sort(array):
-    for i in range(len(array)):
-        if i < len(array)-1:
-            if array[i] > array[i+1]:
-                array[i], array[i+1] = array[i+1], array[i]
+    n = len(array)
+    for i in range(n-1):
+        for j in range(0, n-i-1):
+            if array[j] > array[j+1]:
+                array[j], array[j+1] = array[j+1], array[j]
+    return array
 
 
-bubble_sort([1, 2, 3, 0])
+print(bubble_sort([7, 2, 4, 5, 9, 1, 4, 0, 2, 34, 5]))
