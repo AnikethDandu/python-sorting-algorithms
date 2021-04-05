@@ -14,6 +14,8 @@ def bubble_sort(arr: list) -> list:
     """
     Returns a sorted array using bubble sort
 
+    Time complexity: O(n^2)
+
     :param arr: Array to be sorted
     :type arr: list
     :return: Sorted array
