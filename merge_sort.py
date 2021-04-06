@@ -5,10 +5,11 @@ def merge_sort(arr):
         right_arr = arr[mid_index:]
         merge_sort(left_arr)
         merge_sort(right_arr)
+        merge(left_arr, right_arr, arr)
+    return arr
 
 
-def merge(arr_one, arr_two):
-    arr_temp = [0] * (len(arr_one) + len(arr_two))
+def merge(arr_one, arr_two, arr_temp):
     i = j = k = 0
     while i < len(arr_one) and j < len(arr_two):
         if arr_one[i] < arr_two[j]:
@@ -27,6 +28,3 @@ def merge(arr_one, arr_two):
         j += 1
         k += 1
     return arr_temp
-
-
-print(merge([1, 2, 3, 5], [4, 7, 9]))
