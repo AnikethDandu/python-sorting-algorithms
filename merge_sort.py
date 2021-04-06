@@ -18,12 +18,14 @@ def merge(arr_one, arr_two):
             arr_temp[k] = arr_two[j]
             j += 1
         k += 1
-    if i < len(arr_one):
-        for x in range(i, len(arr_one)):
-            arr_temp[i+x] = arr_one[x]
-    if j < len(arr_two):
-        for x in range(j, len(arr_two)):
-            arr_temp[i+x] = arr_two[x]
+    while i < len(arr_one):
+        arr_temp[k] = arr_one[i]
+        i += 1
+        k += 1
+    while j < len(arr_two):
+        arr_temp[k] = arr_two[j]
+        j += 1
+        k += 1
     return arr_temp
 
 
